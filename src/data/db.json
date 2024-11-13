@@ -1,10 +1,10 @@
-some{
+{
   "companies": [
     {
       "id": 1,
       "name": "Tech Innovators Inc.",
       "description": "A leading company in technology innovation.",
-      "logo": "http://localhost:3001/images/tech-innovators-logo.png",
+      "logo": "https://www.bp.com/apps/settings/wcm/designs/refresh/bp/images/navigation/bp-logo.svg",
       "awards": [
         {
           "title": "Innovation Award",
@@ -24,7 +24,7 @@ some{
       "id": 2,
       "name": "Green Energy Solutions",
       "description": "Specializing in renewable energy solutions.",
-      "logo": "http://localhost:3001/images/green-energy-logo.png",
+      "logo": "hhttps://www.bp.com/apps/settings/wcm/designs/refresh/bp/images/navigation/bp-logo.svg",
       "awards": [
         {
           "title": "Green Tech Award",

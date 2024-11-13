@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import companiesData from '../data/db.json';
 
 function CompanyDetails() {
   const { id } = useParams();
   const [company, setCompany] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/companies/${id}`)
-      .then(response => response.json())
-      .then(data => setCompany(data))
-      .catch(error => console.error('Error fetching company details:', error));
+    const companyData = companiesData.companies.find(c => c.id === parseInt(id));
+    setCompany(companyData);
   }, [id]);
 
   if (!company) {
@@ -19,7 +18,7 @@ function CompanyDetails() {
   return (
     <div className="company-details">
       <h2>{company.name}</h2>
-      <img src={company.logo} alt={`${company.name} logo`} />
+      <img src={company.logo} alt={`${company.name} logo`} style={{ width: '40px', height: '40px' }} />
       <p>{company.description}</p>
       <h3>Awards</h3>
       <ul>

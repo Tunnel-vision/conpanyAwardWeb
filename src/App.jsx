@@ -4,6 +4,7 @@ import CompanyList from './components/CompanyList';
 import CompanyDetails from './components/CompanyDetails';
 import SearchSuggestions from './components/SearchSuggestions';
 import Fuse from 'fuse.js';
+import companiesData from './data/companies.js';
 
 function App() {
   const [companies, setCompanies] = useState([]);
@@ -12,17 +13,12 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://localhost:3001/companies')
-      .then(response => response.json())
-      .then(data => {
-        setCompanies(data);
-        const fuse = new Fuse(data, {
-          keys: ['name'],
-          threshold: 0.3,
-        });
-        setSuggestions(fuse);
-      })
-      .catch(error => console.error('Error fetching companies:', error));
+    setCompanies(companiesData);
+    const fuse = new Fuse(companiesData, {
+      keys: ['name'],
+      threshold: 0.3,
+    });
+    setSuggestions(fuse);
   }, []);
 
   const handleSearch = (event) => {
@@ -32,10 +28,7 @@ function App() {
       const results = suggestions.search(term);
       setCompanies(results.map(result => result.item));
     } else {
-      fetch('http://localhost:3001/companies')
-        .then(response => response.json())
-        .then(data => setCompanies(data))
-        .catch(error => console.error('Error fetching companies:', error));
+      setCompanies(companiesData);
     }
   };
 
