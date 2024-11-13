@@ -1,0 +1,38 @@
+some{
+  "companies": [
+    {
+      "id": 1,
+      "name": "Tech Innovators Inc.",
+      "description": "A leading company in technology innovation.",
+      "logo": "http://localhost:3001/images/tech-innovators-logo.png",
+      "awards": [
+        {
+          "title": "Innovation Award",
+          "content": "For groundbreaking work in AI technology.",
+          "date": "2023-05-15",
+          "photo": "https://images.unsplash.com/photo-1691068765153-4de8f11b6c85?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF3YXJkfGVufDB8fDB8fHww"
+        },
+        {
+          "title": "Sustainability Award",
+          "content": "For eco-friendly tech solutions.",
+          "date": "2022-10-01",
+          "photo": "https://images.unsplash.com/photo-1691068765153-4de8f11b6c85?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF3YXJkfGVufDB8fDB8fHww"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Green Energy Solutions",
+      "description": "Specializing in renewable energy solutions.",
+      "logo": "http://localhost:3001/images/green-energy-logo.png",
+      "awards": [
+        {
+          "title": "Green Tech Award",
+          "content": "For advancements in solar energy.",
+          "date": "2023-03-20",
+          "photo": "https://images.unsplash.com/photo-1691068765153-4de8f11b6c85?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF3YXJkfGVufDB8fDB8fHww"
+        }
+      ]
+    }
+  ]
+}
